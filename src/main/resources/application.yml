@@ -1,0 +1,46 @@
+# 서버 포트
+server:
+  port: 15000
+---
+# 정적 리소스(자동 반영)
+spring:
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: false
+
+---
+# static 정적 리소스 접근
+spring:
+  resources:
+    static-locations: classpath:/static/
+    add-mappings: true
+  mvc:
+    static-path-pattern: /static/**
+---
+#---
+## ORACLE
+#spring:
+#  datasource:
+#    url: jdbc:oracle:thin:@dreamcapsule-db.cfzlzcz0pe0g.ap-northeast-2.rds.amazonaws.com:1521:ORCL
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    username: dreamcapsule
+#    password: dreamcap0902!
+#
+#---
+## mybatis 세팅
+#mybatis:
+#  type-aliases-package: com.dreamcapsule.project.domain
+#  mapper-locations: classpath:mapper/**/*Mapper.xml
+#  configuration:
+#    lazy-loading-enabled: true
+#    aggressive-lazy-loading: false
+#    map-underscore-to-camel-case: true
+#
+#---
+## ERROR 기본값 사용 안함
+#server:
+#  error:
+#    whitelabel:
+#      enabled: false
