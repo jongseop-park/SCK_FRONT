@@ -19,16 +19,15 @@ spring:
   mvc:
     static-path-pattern: /static/**
 ---
-#---
-## ORACLE
-#spring:
-#  datasource:
-#    url: jdbc:oracle:thin:@dreamcapsule-db.cfzlzcz0pe0g.ap-northeast-2.rds.amazonaws.com:1521:ORCL
-#    driver-class-name: oracle.jdbc.driver.OracleDriver
-#    username: dreamcapsule
-#    password: dreamcap0902!
-#
-#---
+# ORACLE
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: sck
+    password: soccerkick
+
+---
 ## mybatis ¼¼ÆÃ
 #mybatis:
 #  type-aliases-package: com.dreamcapsule.project.domain
