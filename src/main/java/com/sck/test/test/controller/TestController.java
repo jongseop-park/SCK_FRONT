@@ -1,4 +1,4 @@
-package com.sck.apps.test.controller;
+package com.sck.test.test.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

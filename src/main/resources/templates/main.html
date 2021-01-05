@@ -8,114 +8,113 @@
     <link rel="stylesheet" href="/static/css/sidebar.css">
     <link rel="stylesheet" href="/static/css/shop-homepage.css" >
     <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
 </head>
 <body >
 
 <!-- Top -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="/">Soccer Kick</a>
-    </div>
-</nav>
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">-->
+<!--    <div class="container">-->
+<!--        <a class="navbar-brand" href="/">Soccer Kick</a>-->
+<!--    </div>-->
+<!--</nav>-->
 <!-- /Top -->
 
 <!-- Side -->
 <div class="wrapper d-flex align-items-stretch">
     <!-- sidebar -->
-    <nav class="side-fixing" id="sidebar">
-        <div class="custom-menu">
-            <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                <i class="fa fa-bars"></i>
-                <span class="sr-only">Toggle Menu</span>
-            </button>
-        </div>
-        <div class="p-4 pt-0">
-            <div class="side-fixing">
-                <h1 style="text-align: center;"><a href="index.html" class="logo">SCK</a></h1>
-                <ul class="list-unstyled components mb-5">
-                    <li style="text-align: center; text-decoration: underline;">
-                        <img src="/static/img/main/user.png">
-                        <a href="#">로그인을 해주세요 ></a>
-                    </li>
-                    <li>
-                        <a href="#homeSubmenu">구장찾기</a>
-                    </li>
-                    <!--<li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
-                           class="dropdown-toggle">게시판</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li>
-                                <a href="#">게시판1</a>
-                            </li>
-                            <li>
-                                <a href="#">게시판2</a>
-                            </li>
-                            <li>
-                                <a href="#">게시판3</a>
-                            </li>
-                        </ul>
-                    </li>-->
-                    <li>
-                        <a href="#">예약조회</a>
-                    </li>
-                    <li>
-                        <a href="#">구장등록</a>
-                    </li>
-                    <li>
-                        <a href="#">구장관리</a>
-                    </li>
-                    <li>
-                        <a href="#">이용내역</a>
-                    </li>
-                </ul>
-            </div>
-            <!--<div class="mb-5">
-                <h3 class="h6">Subscribe for newsletter</h3>
-                <form action="#" class="colorlib-subscribe-form">
-                    <div class="form-group d-flex">
-                        <div class="icon"><span class="icon-paper-plane"></span></div>
-                        <input type="text" class="form-control" placeholder="Enter Email Address">
-                    </div>
-                </form>
-            </div>-->
-
-            <div class="footer source">
-                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-            </div>
-
-        </div>
-    </nav>
+    <th:block th:insert="include/sidebar.html"></th:block>
     <!-- Page Content  -->
-    <div id="content" class="p-4 p-md-5 pt-5">
+    <div id="content" class="p-3">
         <div class="container">
 
             <!-- Search -->
             <div class="search__container">
-                <p class="search__title">
+                <!--<p class="search__title">
                     구장을 검색하세요!
-                </p>
+                </p>-->
                 <input class="search__input" type="text" placeholder="구장 검색">
+                <button class="search__btn">GO</button>
             </div>
             <!-- /Search -->
-            <hr>
+            <!-- 금주의 인기 구장 -->
+            <div class="col-lg-12 popularity-box" style="text-align: center;">
+                <p style="font-size: 20px; margin-top: 1%;"><b>금주의 인기 구장</b></p>
+                <div class="div-card popularity-banner">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <input class="rank" type="button" value="1" disabled/>
+                        <div class="card h-100 card-shadow">
+                            <figure class="snip1445">
+                                <img class="card-img-top card-img" src="/static/img/field_1.jpg" alt="">
+                                <figcaption>
+                                    <div>
+                                        <h4>자세히보기</h4>
+                                    </div>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title c-title"><b>서울 축구구장</b></h5>
+                                <p class="card-text c-content">테스트 데이터</p>
+                                <h6 class="card-h6">02-000-0000</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <input class="rank" type="button" value="2" disabled/>
+                        <div class="card h-100 card-shadow">
+                            <figure class="snip1445">
+                                <img class="card-img-top card-img" src="/static/img/field_1.jpg" alt="">
+                                <figcaption>
+                                    <div>
+                                        <h4>자세히보기</h4>
+                                    </div>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title c-title"><b>서울 축구구장</b></h5>
+                                <p class="card-text c-content">테스트 데이터</p>
+                                <h6 class="card-h6">02-000-0000</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <input class="rank" type="button" value="3" disabled/>
+                        <div class="card h-100 card-shadow">
+                            <figure class="snip1445">
+                                <img class="card-img-top card-img" src="/static/img/field_1.jpg" alt="">
+                                <figcaption>
+                                    <div>
+                                        <h4>자세히보기</h4>
+                                    </div>
+                                </figcaption>
+                                <a href="#"></a>
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title c-title"><b>서울 축구구장</b></h5>
+                                <p class="card-text c-content">테스트 데이터</p>
+                                <h6 class="card-h6">02-000-0000</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="col-lg-12" style="margin: 0 auto;">
                 <!-- 원래 슬라이드 -->
-<!--                <div th:insert="/include/slide.html"></div>-->
+                <!--                <div th:insert="/include/slide.html"></div>-->
                 <div class="select-box-shadow">
-                <select class="form-control">
-                    <option value="전체보기">전체보기</option>
-                    <option value="서울">서울</option>
-                    <option value="대전">대전</option>
-                    <option value="대구">대구</option>
-                    <option value="부산">부산</option>
-                </select>
+                    <select class="form-control">
+                        <option value="전체보기">전체보기</option>
+                        <option value="서울">서울</option>
+                        <option value="대전">대전</option>
+                        <option value="대구">대구</option>
+                        <option value="부산">부산</option>
+                    </select>
                 </div>
 
-                <div class="row div-card">
+                <div class="div-card">
 
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100 card-shadow">
@@ -129,8 +128,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>서울 축구구장</b></h5>
-                                <p class="card-text">서울에서 제일 고급스러운 축구구장입니다. 가격은 무료입니다. 아무나 오세요!</p>
+                                <h5 class="card-title c-title"><b>서울 축구구장</b></h5>
+                                <p class="card-text c-content">테스트 데이터</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>
@@ -148,12 +147,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>산티아고 베르나베우 스타디움</b></h5>
-                                <p class="card-text">
-                                    에스타디오 산티아고 베르나베우(스페인어: Estadio Santiago Bernabéu)는
-                                    스페인의 마드리드에 위치한 축구 경기장이다.
-                                    1947년 12월 14일에 개장하였으며, 레알 마드리드 CF의 홈 경기장이다.
-                                </p>
+                                <h5 class="card-title c-title"><b>산티아고 베르나베우 스타디움</b></h5>
+                                <p class="card-text c-content">용산구 한강대로23길 55 현대아이파크몰ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>
@@ -162,7 +157,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100 card-shadow">
                             <figure class="snip1445">
-                                <img class="card-img-top card-img" src="/static/img/field_3.jpg" alt="">
+                                <img class="card-img-top card-img" src="/static/img/field_2.jpg" alt="">
                                 <figcaption>
                                     <div>
                                         <h4>자세히보기</h4>
@@ -171,10 +166,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>올드 트래포드 스타디움</b></h5>
-                                <p class="card-text">
-                                    올드 트래퍼드(Old Trafford)는 영국 잉글랜드 그레이터맨체스터 주 올드 트래퍼드에 위치한 경기장이다.
-                                </p>
+                                <h5 class="card-title c-title"><b>산티아고 베르나베우 스타디움</b></h5>
+                                <p class="card-text c-content">용산구 한강대로23길 55 현대아이파크몰</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>
@@ -183,7 +176,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100 card-shadow">
                             <figure class="snip1445">
-                                <img class="card-img-top card-img" src="/static/img/field_4.jpg" alt="">
+                                <img class="card-img-top card-img" src="/static/img/field_2.jpg" alt="">
                                 <figcaption>
                                     <div>
                                         <h4>자세히보기</h4>
@@ -192,11 +185,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>알리안츠 아레나</b></h5>
-                                <p class="card-text">
-                                    알리안츠 아레나(Allianz Arena)는 독일 뮌헨에 있는 축구 경기장이다.
-                                    2005/06 시즌부터 바이에른 뮌헨과 TSV 1860 뮌헨이 홈 구장으로 사용하고 있다.
-                                </p>
+                                <h5 class="card-title c-title"><b>산티아고 베르나베우 스타디움</b></h5>
+                                <p class="card-text c-content">용산구 한강대로23길 55 현대아이파크몰</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>
@@ -205,7 +195,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100 card-shadow">
                             <figure class="snip1445">
-                                <img class="card-img-top card-img" src="/static/img/field_5.jpg" alt="">
+                                <img class="card-img-top card-img" src="/static/img/field_2.jpg" alt="">
                                 <figcaption>
                                     <div>
                                         <h4>자세히보기</h4>
@@ -214,12 +204,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>캄 노우</b></h5>
-                                <p class="card-text">
-                                    캄 노우(카탈루냐어: Camp Nou: [kamˈnɔw], "새 경기장"이라는 뜻, 스페인어: Camp Nou 캄프 노우[*])는
-                                    스페인 바르셀로나에 위치한 축구 경기장이다. 관중 수용인원은 98,772명이고,
-                                    유럽에서 가장 큰 축구 경기장이며, 세계에서 11번째로 큰 경기장이다.
-                                </p>
+                                <h5 class="card-title c-title"><b>산티아고 베르나베우 스타디움</b></h5>
+                                <p class="card-text c-content">용산구 한강대로23길 55 현대아이파크몰</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>
@@ -237,11 +223,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>웸블리 스타디움</b></h5>
-                                <p class="card-text">
-                                    웸블리 스타디움(Wembley Stadium)은 영국 런던 웸블리에 있는 축구 경기장이다.
-                                    런던의 런던 버러 오브 브렌트에 자리 잡고 있다. 좌석 수는 90,000석이며, 유럽에서 캄프 누 다음으로 가장 큰 경기장이다.
-                                </p>
+                                <h5 class="card-title c-title"><b>웸블리 스타디움</b></h5>
+                                <p class="card-text c-content">용산구 한강대로23길 55 현대아이파크몰</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>
@@ -258,11 +241,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>웸블리 스타디움</b></h5>
-                                <p class="card-text">
-                                    웸블리 스타디움(Wembley Stadium)은 영국 런던 웸블리에 있는 축구 경기장이다.
-                                    런던의 런던 버러 오브 브렌트에 자리 잡고 있다. 좌석 수는 90,000석이며, 유럽에서 캄프 누 다음으로 가장 큰 경기장이다.
-                                </p>
+                                <h5 class="card-title c-title"><b>웸블리 스타디움</b></h5>
+                                <p class="card-text c-content">용산구 한강대로23길 55 현대아이파크몰</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>
@@ -279,11 +259,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>웸블리 스타디움</b></h5>
-                                <p class="card-text">
-                                    웸블리 스타디움(Wembley Stadium)은 영국 런던 웸블리에 있는 축구 경기장이다.
-                                    런던의 런던 버러 오브 브렌트에 자리 잡고 있다. 좌석 수는 90,000석이며, 유럽에서 캄프 누 다음으로 가장 큰 경기장이다.
-                                </p>
+                                <h5 class="card-title c-title"><b>웸블리 스타디움</b></h5>
+                                <p class="card-text c-content">용산구 한강대로23길 55 현대아이파크몰</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>
@@ -300,11 +277,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>웸블리 스타디움</b></h5>
-                                <p class="card-text">
-                                    웸블리 스타디움(Wembley Stadium)은 영국 런던 웸블리에 있는 축구 경기장이다.
-                                    런던의 런던 버러 오브 브렌트에 자리 잡고 있다. 좌석 수는 90,000석이며, 유럽에서 캄프 누 다음으로 가장 큰 경기장이다.
-                                </p>
+                                <h5 class="card-title c-title"><b>웸블리 스타디움</b></h5>
+                                <p class="card-text c-content">용산구 한강대로23길 55 현대아이파크몰</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>
@@ -321,11 +295,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>웸블리 스타디움</b></h5>
-                                <p class="card-text">
-                                    웸블리 스타디움(Wembley Stadium)은 영국 런던 웸블리에 있는 축구 경기장이다.
-                                    런던의 런던 버러 오브 브렌트에 자리 잡고 있다. 좌석 수는 90,000석이며, 유럽에서 캄프 누 다음으로 가장 큰 경기장이다.
-                                </p>
+                                <h5 class="card-title c-title"><b>웸블리 스타디움</b></h5>
+                                <p class="card-text c-content">용산구 한강대로23길 55 현대아이파크몰</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>
@@ -342,11 +313,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>웸블리 스타디움</b></h5>
-                                <p class="card-text">
-                                    웸블리 스타디움(Wembley Stadium)은 영국 런던 웸블리에 있는 축구 경기장이다.
-                                    런던의 런던 버러 오브 브렌트에 자리 잡고 있다. 좌석 수는 90,000석이며, 유럽에서 캄프 누 다음으로 가장 큰 경기장이다.
-                                </p>
+                                <h5 class="card-title c-title"><b>웸블리 스타디움</b></h5>
+                                <p class="card-text c-content">용산구 한강대로23길 55 현대아이파크몰</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>
@@ -363,11 +331,8 @@
                                 <a href="#"></a>
                             </figure>
                             <div class="card-body">
-                                <h5 class="card-title"><b>웸블리 스타디움</b></h5>
-                                <p class="card-text">
-                                    웸블리 스타디움(Wembley Stadium)은 영국 런던 웸블리에 있는 축구 경기장이다.
-                                    런던의 런던 버러 오브 브렌트에 자리 잡고 있다. 좌석 수는 90,000석이며, 유럽에서 캄프 누 다음으로 가장 큰 경기장이다.
-                                </p>
+                                <h5 class="card-title c-title"><b>웸블리 스타디움</b></h5>
+                                <p class="card-text c-content">용산구 한강대로23길 55 현대아이파크몰</p>
                                 <h6 class="card-h6">02-000-0000</h6>
                             </div>
                         </div>

@@ -8216,11 +8216,14 @@ h1, h2, h3, h4, h5,
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  position: relative; }
+  position: absolute;
+}
 #sidebar .h6 {
   color: #fff; }
 #sidebar.active {
-  margin-left: -300px; }
+  margin-left: -300px;
+  /*display: none;*/
+}
 #sidebar.active .custom-menu {
   margin-right: -50px; }
 #sidebar h1 {
@@ -8246,14 +8249,18 @@ h1, h2, h3, h4, h5,
 #sidebar ul li.active > a {
   background: transparent;
   color: #fff; }
-@media (max-width: 991.98px) {
-  #sidebar {
-    margin-left: -250px; }
+@media (max-width: 991.98px) { /* 화면크기에 따른 CSS */
+  #sidebar { /* 사이드바 위치 조절 */
+    /*margin-left: -250px;*/
+  }
   #sidebar.active {
-    margin-left: 0; }
-  #sidebar .custom-menu {
-    margin-right: -50px !important;
-    top: 10px !important; } }
+    /*margin-left: 0; */
+  }
+  #sidebar .custom-menu { /* 메뉴버튼 위치 조절 */
+    /*margin-right: -50px !important;*/
+    /*top: 10px !important;*/
+  }
+}
 #sidebar .custom-menu {
   display: inline-block;
   position: absolute;
@@ -8339,6 +8346,58 @@ a[data-toggle="collapse"] {
   color: rgba(0, 0, 0, 0.3); }
 
 .side-fixing{
-  width: 200px;
+  text-align: center;
+  z-index: 9999;
+  background-color: black;
+  width: 250px;
+  height: 100%;
   position: fixed;
+  overflow: auto;
+}
+.side-fixing::-webkit-scrollbar { /* 스크롤 전체 */
+  width:5px;
+}
+
+.side-fixing::-webkit-scrollbar-thumb { /* 막대 */
+  background-color: white;
+}
+
+.side-fixing::-webkit-scrollbar-track { /* 여백 */
+  background-color: gray;
+}
+
+.lately-div {
+}
+
+.lately-btn {
+  margin-bottom: 5%;
+  text-align: left;
+  padding: 5px 5px 5px 10px;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  border: none;
+  border-radius: 5px;
+}
+
+.lately-btn-delete{
+  float: right;
+  color: white;
+  font-width: bold;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: #005cbf;
+}
+.login-out-btn{
+  width: 80%;
+  padding: 5px 0 5px 0;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
