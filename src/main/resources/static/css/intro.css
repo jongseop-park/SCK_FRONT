@@ -8,3 +8,32 @@ html, body {
     height: 100%;
     background-color: black;
 }
+
+.header-logo {
+    width: 10%;
+    min-width: 170px;
+    height: 10%;
+    min-height: 100px;
+}
+
+.header-title {
+    margin: 0 auto;
+}
+#logo {
+    margin-left: 1%;
+    margin-top: 1%;
+    background-color: black;
+    width: 200px;
+    height: 150px;
+    background-image:url("/static/img/logo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.test {
+    margin: 5% auto;
+    background-color: black;
+    width: 80%;
+    height: 10em;
+}
